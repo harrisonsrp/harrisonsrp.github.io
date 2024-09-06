@@ -2501,6 +2501,7 @@ blockquote {
 @media only screen and (max-width: 768px) {
   .portfolio-grid figure {
     width: 50%;
+
   }
 
   .section-content {
@@ -3072,4 +3073,179 @@ blockquote {
 
 .next-btn {
   right: 10px;
+}
+
+
+
+/* Sevices */
+/* General Styles for the Services Section */
+
+#services {
+  padding: 50px 0;
+  background-color: #f9f9f9;
+}
+
+.page-title h2 {
+  font-size: 36px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Filters */
+.services-filters {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.services-filters li {
+  margin: 0 10px;
+}
+
+.services-filters a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #fff;
+  padding: 10px 15px;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.services-filters .active a {
+  background-color: #2a93a3;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.services-filters a:hover {
+  color: #fff;
+
+}
+
+/* Services Grid */
+.services-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.services-grid .item {
+  width: 30%;
+  margin: 15px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.services-grid .item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+.services-item-img img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.services-grid .item i {
+  font-size: 30px;
+  color: #2aa38b;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.services-grid .name {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.services-grid .category {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 15px;
+}
+
+.services-grid .item p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+  .services-grid .item {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-grid .item {
+    width: 100%;
+  }
+}
+
+/* Additional Hover Effects */
+.services-filters a:hover{
+  color: #2a93a3;
+  cursor: pointer;
+}
+.services-filters .active a {
+  color: #fff;
+}
+
+.services-grid .item:hover i {
+  color: #2a93a3;
+  cursor: pointer;
+}
+
+.services-grid .item:hover .name {
+  color: #2a93a3;
+  cursor: pointer;
+}
+
+
+/* For smaller screens, make the buttons stack */
+@media (max-width: 768px) {
+  .services-filters {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .services-filters li {
+    width: 100%; /* Make the list items full width */
+    margin-bottom: 10px;
+  }
+
+  .services-filters .btn {
+    width: 100%; /* Make the buttons full width */
+    padding: 5px; /* Increase padding for better clickability */
+  }
+}
+
+/* For medium and larger screens */
+@media (min-width: 769px) {
+  .services-filters {
+    display: flex;
+    justify-content: center; /* Center the buttons */
+  }
+
+  .services-filters li {
+    margin-right: 10px; /* Add space between buttons */
+  }
+
+  .services-filters li:last-child {
+    margin-right: 0;
+  }
 }

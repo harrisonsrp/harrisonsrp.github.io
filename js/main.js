@@ -314,3 +314,41 @@
     });
 
 })(jQuery);
+
+
+// JavaScript for filtering services
+document.addEventListener('DOMContentLoaded', function () {
+    // Get all filter buttons and service items
+    const filters = document.querySelectorAll('.filter');
+    const serviceItems = document.querySelectorAll('.item');
+  
+    // Add click event listener to each filter button
+    filters.forEach(filter => {
+      filter.addEventListener('click', function (e) {
+        e.preventDefault();
+  
+        // Remove active class from all filter buttons
+        filters.forEach(btn => btn.parentElement.classList.remove('active'));
+  
+        // Add active class to the clicked filter button
+        this.parentElement.classList.add('active');
+  
+        // Get the data-group attribute of the clicked filter
+        const filterGroup = this.getAttribute('data-group');
+  
+        // Loop through all service items
+        serviceItems.forEach(item => {
+          // Get the data-groups attribute of the service item
+          const itemGroups = JSON.parse(item.getAttribute('data-groups'));
+  
+          // Show or hide the item based on the selected filter
+          if (filterGroup === 'category_all' || itemGroups.includes(filterGroup)) {
+            item.style.display = 'block'; // Show the item
+          } else {
+            item.style.display = 'none'; // Hide the item
+          }
+        });
+      });
+    });
+  });
+  
