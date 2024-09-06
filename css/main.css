@@ -3249,3 +3249,28 @@ blockquote {
     margin-right: 0;
   }
 }
+
+
+
+.contact-info {
+  width: 100%;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.icon {
+  font-size: 24px;
+  color: #2a93a3;
+  margin-right: 10px;
+}
+
+.contact-title {
+  margin: 0;
+  font-size: 16px;
+  color: #fff;
+}
