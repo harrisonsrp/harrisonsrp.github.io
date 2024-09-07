@@ -1702,7 +1702,7 @@ textarea.form-control, textarea.form-control:focus {
 }
 
 .blog-card .media-block:hover img {
-  transform: scale(1.1);
+  transform: scale(1);
 }
 
 .blog-card .post-without-f-image {
@@ -1719,6 +1719,8 @@ textarea.form-control, textarea.form-control:focus {
 
 .blog-card .blog-item-title {
   margin: 5px 0 0 0;
+  font-family: 'Poppins', Helvetica, sans-serif;
+  color: #fff;
 }
 
 .blog-card .post-meta {
