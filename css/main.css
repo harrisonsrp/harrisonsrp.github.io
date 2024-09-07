@@ -2502,11 +2502,6 @@ blockquote {
 
   }
 
-  .section-content {
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-
   .info-list {
     margin-top: 20px;
   }
@@ -3133,12 +3128,12 @@ blockquote {
 
 .services-grid .item {
   width: 30%;
-  margin: 15px;
+  margin: 10px;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
-  padding: 20px;
+  padding: 10px;
   transition: transform 0.1s ease, box-shadow 0.1s ease;
 }
 
