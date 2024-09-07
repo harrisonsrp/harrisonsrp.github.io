@@ -406,8 +406,6 @@ input[type="submit"]:focus {
 
 .header-photo img {
   max-width: 100%;
-  background-color: #fff;
-  border: 3px solid #fff;
   border-radius: 300px;
 }
 
@@ -3374,4 +3372,119 @@ blockquote {
   font-size: 15px;
   color: #fff;
   text-align: center;
+}
+
+.header-photo {
+  position: relative;
+  display: inline-block;
+}
+
+.progress-wrapper {
+  position: relative;
+}
+
+.header-photo img {
+  display: block;
+  border-radius: 50%; /* Make the image round */
+  transition: transform 1s ease-in-out; /* Smooth transition for scaling */
+}
+
+.header-photo::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 5px solid transparent; /* Border is initially transparent */
+  border-bottom-color: #2a93a3; /* Default color at the bottom */
+  transform: rotate(0deg); /* Initial rotation */
+  transition: transform 2s linear; /* Smooth transition */
+  z-index: 1; /* Ensure it is on top of the image */
+}
+
+.header-content:hover .header-photo::before {
+  animation: progressFill 2s linear infinite, colorChange 6s linear infinite; /* Apply the fill and color change animations */
+}
+
+@keyframes progressFill {
+  0% {
+    transform: rotate(0deg); /* Start from 0 degrees */
+  }
+  100% {
+    transform: rotate(360deg); /* Complete a full rotation */
+  }
+}
+
+@keyframes colorChange {
+  0% {
+    border-bottom-color: #2a93a3; /* First color */
+  }
+  33% {
+    border-bottom-color: #ff6347; /* Second color */
+  }
+  66% {
+    border-bottom-color: #8a2be2; /* Third color */
+  }
+  100% {
+    border-bottom-color: #2a93a3; /* Return to the first color */
+  }
+}
+
+
+.nav-anim {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.menu-icon {
+  font-size: 20px;
+  transition: transform 0.3s ease-in-out; /* Smooth transition for scaling */
+}
+
+.nav-anim:hover .menu-icon {
+  animation: iconColorChange 2s linear infinite; /* Apply the color-changing animation */
+ /* Slightly scale up on hover */
+}
+
+/* Animation keyframes for icon color change */
+@keyframes iconColorChange {
+  0% {
+    color: #2a93a3; /* First color */
+  }
+  50% {
+    color: #ff6347; /* Second color */
+  }
+  100% {
+    color: #8a2be2; /* Third color */
+  }
+}
+
+
+
+ul li a {
+  text-decoration: none;
+  font-size: 30px; /* Icon size */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for scaling */
+}
+
+
+ul li a:hover i {
+  animation: iconColorChange 1.5s linear infinite; /* Apply the color-changing animation */
+  /* Slightly scale the icon on hover */
+}
+
+/* Animation keyframes for icon color change */
+@keyframes iconColorChange {
+  0% {
+    color: #2a93a3; /* First color */
+  }
+  50% {
+    color: #ff6347; /* Second color */
+  }
+  100% {
+    color: #8a2be2; /* Third color */
+  }
 }
